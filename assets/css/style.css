@@ -1,3 +1,25 @@
+* {
+    box-sizing: border-box;
+  }
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
 header {
     background-color: #ffffff;
     margin-left: 60px;
@@ -5,15 +27,13 @@ header {
     min-width: 960px;
 }
 
-
 .headerSection {
     background-color: #ffffff;
-    padding: 0px, 20px, 20px, 20px;
+    padding: 0px, 20px;
     top: 0;
     width: 100%;
     position: fixed;
     z-index: 1;
-    margin-bottom: 20px;
     border-bottom: 1px solid #cccccc;
 }
 
@@ -30,6 +50,12 @@ h1 {
     top: 0;
 }
 
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 /*About me title on index*/
 h2 {
     font-family: 'Georgia', Times, "Times New Roman", serif;
@@ -42,7 +68,7 @@ h2 {
 
 
 /*Links that show on the right of every page. Embedded in the header*/
-.navBar {
+.topNav {
     float: right;
     overflow: auto;
     padding: 18px 16px;
@@ -64,9 +90,10 @@ li {
 li a {
     float: right;
     display: block;
-    padding: 8px;
+    padding: 14px 16px;
     text-align: center;
     text-decoration: none;
+    font-size: 17px;
     color: #777777;
 }
 
@@ -74,6 +101,10 @@ li a:hover {
     background-color: #777777;
     color: white;
 }
+
+.topnav .icon {
+    display: none;
+  }  
 
 body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -131,23 +162,21 @@ input {
 }
 
 /*Box around each image containing text block as well. */
-.container {
+.col-md-3 {
     position: relative;
-    margin: 30px auto;
-    width: 40%;
+    margin: 15px;
+    width: 35%;
     float: left;
 }
 
 .textBlock {
     position: absolute;
-    bottom: 5px;
-    width: 180px;
-    padding: 10px;
+    top: 148px;
+    width: 200px;
     background-color: #4aaaa5;
     opacity: 0.75;
     color: white;
     text-align: center;
-    width: 180px;
 }
 
 footer {
@@ -177,43 +206,71 @@ footer {
 /*Media query @768px */
 @media screen and (max-width: 768px) {
     .wrapper {
-        width: 100%;
+        width: 768px;
     }
 
     .content {
-        max-width: 740px;
-        min-width: 740px;
         line-height: 1.5;
         padding: 10px;
-        margin: 20px;
         background-color: red;
         font-size: 12px;
-    }
-
-    .container {
-        margin: 20px;
-    }
-
-    header {
-        background-color: red;
-        padding-right: 10px;
-
+        margin-left: 20px;
     }
 
     .headerSection {
         background-color: red;
+        height: 8%;
+    }
+
+    h1 {
+        font-family: 'Georgia', Times, "Times New Roman", serif;
+        float: left;
+        background-color: #4aaaa5;
+        color: white;
+    }
+
+    .topNav {
+        float: left;
+        font-size: 12px;
+    }
+
+    [class*="col-"] {
         width: 100%;
-        margin-bottom: 20px;
+      }
 }
 
 /*Media query @640px */
 @media screen and (max-width: 640px) {
-    .wrapper {
-        width: 100%;
-    }
+
     header {
         position: static;
-        background-color: green;
+        background-color: greenyellow;
     }
 
+    .wrapper {
+        width: 640px;
+    }
+
+    .content {
+        line-height: 1.5;
+        padding: 10px;
+        background-color: green;
+        font-size: 12px;
+        margin-left: 20px;
+        flex-wrap: flex;
+    }
+
+    .headerSection {
+        background-color: green;
+        height: 5%;
+    }
+
+    .topNav {
+        float: left;
+        font-size: 12px;
+    }
+
+    [class*="col-"] {
+        width: 100%;
+      }
 }
