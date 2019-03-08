@@ -13,7 +13,6 @@ header {
     width: 100%;
     position: fixed;
     z-index: 1;
-    height: 80px;
     margin-bottom: 20px;
     border-bottom: 1px solid #cccccc;
 }
@@ -164,4 +163,57 @@ footer {
     height: 40px;
     color: lightgray;
     padding-top: 20px;
+}
+
+/*Media query @ 980px*/
+
+@media screen and (max-width: 980px) {
+    .wrapper {
+        width: 980px;
+    }
+}
+
+
+/*Media query @768px */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .content {
+        max-width: 740px;
+        min-width: 740px;
+        line-height: 1.5;
+        padding: 10px;
+        margin: 20px;
+        background-color: red;
+        font-size: 12px;
+    }
+
+    .container {
+        margin: 20px;
+    }
+
+    header {
+        background-color: red;
+        padding-right: 10px;
+
+    }
+
+    .headerSection {
+        background-color: red;
+        width: 100%;
+        margin-bottom: 20px;
+}
+
+/*Media query @640px */
+@media screen and (max-width: 640px) {
+    .wrapper {
+        width: 100%;
+    }
+    header {
+        position: static;
+        background-color: green;
+    }
+
 }
