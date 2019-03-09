@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Becca's Basic Portfolio</title>
     <style>
         body {
@@ -17,10 +18,9 @@
 <body>
 
     <div class="headerSection">
-
         <header>
             <h1>Becca Shieh</h1>
-            <div class="navBar">
+            <div class="topNav" id="myTopNav">
                 <ul>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
@@ -31,25 +31,26 @@
 
     </div>
 
-    <div class="content">
-        <div class="contactSection">
-            <h2>Contact</h2>
-            <br><br>
-            <form class="contactForms">
-                Name:<br>
-                <input type="text" name="Name">
-                <br>
-                Email:<br>
-                <input type="text" name="Email">
-                <br>
-                Message:<br>
-                <textarea id="messageBox" name="Message" maxlength="250"></textarea>
-                <br>
-                <input id="submit" type="submit" value="Submit">
-            </form>
+    <div class="row">
+        <div class="col-12">
+            <div class="contactSection">
+                <h2>Contact</h2>
+                <br><br>
+                <form class="contactForms">
+                    Name:<br>
+                    <input type="text" name="Name">
+                    <br>
+                    Email:<br>
+                    <input type="text" name="Email">
+                    <br>
+                    Message:<br>
+                    <textarea id="messageBox" name="Message" maxlength="250"></textarea>
+                    <br>
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </div>
-
     <div>
         <footer>Copyright©</footer>
     </div>

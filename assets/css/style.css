@@ -9,11 +9,11 @@ header {
     min-width: 960px;
 }
 
-.container {
+.col-12 {
     display: grid;
     grid-template-columns: auto;
-    max-width: 960px;
-    min-width: 960px;
+    max-width: 90%;
+    min-width: 90%;
     margin-top: 120px;
     margin-left: 60px;
     line-height: 1.5;
@@ -21,6 +21,10 @@ header {
     padding: 20px;
     background-color: #ffffff;
     float: left;
+}
+
+.col-md-3 {
+    justify-content: center;
 }
 
 .headerSection {
@@ -87,7 +91,7 @@ li a {
     color: #777777;
 }
 
-li a:hover {
+.topNav:hover {
     background-color: #777777;
     color: white;
 }
@@ -161,7 +165,7 @@ input {
 
 .textBlock {
     position: absolute;
-    top: 148px;
+    top: 60%;
     width: 200px;
     background-color: #4aaaa5;
     opacity: 0.75;
@@ -198,10 +202,12 @@ footer {
     .wrapper {
         width: 768px;
     }
+    #contentRow {
+        width: 50%;
+    }
 
     .headerSection {
-        background-color: red;
-        height: 8%;
+        height: 12%;
     }
 
     h1 {
@@ -211,9 +217,14 @@ footer {
         color: white;
     }
 
+    h2 {
+        color: white;
+    }
+
     .topNav {
         float: left;
         font-size: 12px;
+        color: white;
     }
 
     [class*="col-"] {
@@ -227,12 +238,35 @@ footer {
 
     .textBlock {
         width: 40%;
+        height: 40%;
     }
 
     #becca {
         width: 60%;
         height: 40%;
     }
+
+    p {
+        font-size: larger;
+    }
+
+    .col-12 {
+        display: grid;
+        grid-template-columns: auto;
+        background-color: gray;
+        float: left;
+        color: white;
+        font-size: larger;
+        margin-right: 20%;
+    }
+
+    .col-md-3 {
+        justify-content: center;
+    }
+    img {
+        width: 40%;
+    }
+
 }
 
 /*Media query @640px */
@@ -240,7 +274,6 @@ footer {
 
     header {
         position: static;
-        background-color: greenyellow;
     }
 
     .wrapper {
@@ -248,8 +281,7 @@ footer {
     }
 
     .headerSection {
-        background-color: green;
-        height: 5%;
+        height: 12%;
     }
 
     .topNav {
@@ -266,7 +298,13 @@ footer {
         height: 20%;
     }
 
+    p {
+        font-size: large;   
+    }
+
     .textBlock {
+        top: 60%;
+        height: 40%;
         width: 60%;
     }
 }
